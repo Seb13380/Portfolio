@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Meta viewport pour responsive sur mobile:contentReference[oaicite:3]{index=3} -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio de Sébastien Giordano</title>
+  <!-- Intégration de Tailwind CSS via CDN Play (développement rapide):contentReference[oaicite:4]{index=4} -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style>
+    /* Défilement fluide pour les liens d'ancrage */
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- En-tête avec navigation -->
+  <header class="fixed top-0 left-0 w-full bg-white shadow">
+    <nav class="container mx-auto flex items-center justify-between p-4">
+      <div class="text-lg font-bold">SG Portfolio</div>
+      <!-- Menu burger pour mobile -->
+      <input type="checkbox" id="nav-toggle" class="peer hidden" />
+      <label for="nav-toggle" class="block md:hidden cursor-pointer">
+        <!-- Icône burger -->
+        <div class="space-y-1">
+          <span class="block w-6 h-0.5 bg-gray-800"></span>
+          <span class="block w-6 h-0.5 bg-gray-800"></span>
+          <span class="block w-6 h-0.5 bg-gray-800"></span>
+        </div>
+      </label>
+      <!-- Liens de navigation -->
+      <ul class="hidden md:flex space-x-6 peer-checked:flex flex-col md:flex-row md:items-center">
+        <li><a href="#accueil" class="hover:text-blue-600">Accueil</a></li>
+        <li><a href="#apropos" class="hover:text-blue-600">À propos</a></li>
+        <li><a href="#realisations" class="hover:text-blue-600">Réalisations</a></li>
+        <li><a href="#competences" class="hover:text-blue-600">Compétences</a></li>
+        <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="pt-20"> <!-- Padding top pour header fixe -->
+
+    <!-- Accueil Section -->
+    <section id="accueil" class="container mx-auto text-center py-20 bg-white">
+      <h1 class="text-4xl md:text-6xl font-extrabold mb-4">Sébastien GIORDANO</h1>
+      <p class="text-2xl text-blue-600 mb-6">Développeur Web et Mobile</p>
+
+      <!-- Timeline simplifié (inspiré du design) -->
+      <div class="grid grid-cols-2 gap-4 mb-8">
+        <div class="space-y-2">
+          <div class="px-4 py-2 bg-gray-100 rounded">Bac scientifique</div>
+          <div class="px-4 py-2 bg-gray-100 rounded">BTS Optique</div>
+          <div class="px-4 py-2 bg-gray-100 rounded">Bac +2</div>
+        </div>
+        <div class="space-y-2">
+          <div class="px-4 py-2 bg-gray-100 rounded">Licence Optique</div>
+          <div class="px-4 py-2 bg-gray-100 rounded">Directeur de centre optique</div>
+          <div class="px-4 py-2 bg-gray-100 rounded">Développeur Web & Mobile</div>
+        </div>
+      </div>
+
+      <!-- Bouton Télécharger CV -->
+      <a href="./cv.pdf" download class="inline-block bg-blue-600 text-white px-6 py-3 rounded shadow hover:bg-blue-700">
+        Télécharger CV
+      </a>
+    </section>
+
+    <!-- À propos Section -->
+    <section id="apropos" class="container mx-auto py-16">
+      <h2 class="text-3xl font-bold mb-6">Qui suis-je ?</h2>
+      <p class="mb-4">Actuellement en formation en développement web et mobile à l’École RI7, je me spécialise dans la création de sites et d’applications sécurisées, aussi bien côté navigateur que serveur.</p>
+      <p class="mb-4">J’ai décidé d’orienter ma trajectoire professionnelle vers ma passion pour le développement informatique.</p>
+      <p class="mb-4">Cette transition me permet d’allier rigueur, logique et créativité afin de développer des applications et des sites web ergonomiques et efficaces.</p>
+      <h3 class="text-2xl font-semibold mt-8 mb-4">Objectif professionnel</h3>
+      <p class="mb-4">Intégrer une entreprise dynamique où je pourrai mettre mes compétences en développement web et mobile au service de projets innovants.</p>
+      <p>Basé à Plan-de-Cuques (13), je suis disponible pour des opportunités en entreprise.</p>
+    </section>
+
+    <!-- Réalisations Section -->
+    <section id="realisations" class="container mx-auto py-16 bg-white">
+      <h2 class="text-3xl font-bold mb-6">Mes réalisations</h2>
+      <!-- Conteneur pour les projets (rempli par JavaScript) -->
+      <div id="projects" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Exemple de carte statique (sera remplacé par JS) -->
+        <!-- <div class="border rounded-lg p-4 shadow">
+          <h3 class="text-xl font-semibold">Nom du projet</h3>
+          <p>Description courte du projet...</p>
+          <a href="#" class="text-blue-600 hover:underline">Voir sur GitHub</a>
+        </div> -->
+      </div>
+    </section>
+
+    <!-- Compétences Section -->
+    <section id="competences" class="container mx-auto py-16">
+      <h2 class="text-3xl font-bold mb-6">Mes compétences et outils utilisés</h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4 text-center">
+        <div class="bg-gray-100 p-4 rounded">HTML5</div>
+        <div class="bg-gray-100 p-4 rounded">CSS3</div>
+        <div class="bg-gray-100 p-4 rounded">JavaScript</div>
+        <div class="bg-gray-100 p-4 rounded">Tailwind CSS</div>
+        <div class="bg-gray-100 p-4 rounded">Git</div>
+        <div class="bg-gray-100 p-4 rounded">Node.js</div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container mx-auto py-16 bg-white">
+      <h2 class="text-3xl font-bold mb-6">Contactez-moi</h2>
+      <!-- Formulaire de contact (mailto: envoie vers client mail par défaut):contentReference[oaicite:5]{index=5} -->
+      <form id="contact-form" action="mailto:sebcecg@gmail.com" method="POST" enctype="text/plain" class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+        <input type="text" name="prenom" placeholder="Prénom" required class="border p-2 rounded"/>
+        <input type="text" name="nom" placeholder="Nom" required class="border p-2 rounded"/>
+        <input type="email" name="email" placeholder="E-mail" required class="border p-2 rounded md:col-span-2"/>
+        <textarea name="message" rows="5" placeholder="Message" required class="border p-2 rounded md:col-span-2"></textarea>
+        <button type="submit" class="md:col-span-2 bg-blue-600 text-white px-4 py-2 rounded shadow hover:bg-blue-700">
+          Envoyer
+        </button>
+      </form>
+      <!-- Contacts directs -->
+      <div class="flex flex-wrap gap-4">
+        <a href="tel:+330123456789" class="text-blue-600 hover:underline">Téléphone</a>
+        <a href="https://wa.me/330123456789" target="_blank" class="text-green-600 hover:underline">WhatsApp</a>
+        <a href="https://instagram.com/votre.profil" target="_blank" class="text-pink-600 hover:underline">Instagram</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="text-center py-8">
+    <p class="text-sm text-gray-500">© 2025 Sébastien Giordano</p>
+  </footer>
+
+</body>
+</html>
