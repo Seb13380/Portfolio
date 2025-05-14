@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // Fonction pour créer une carte de projet
   function createProjectCard(name, description, url) {
     const card = document.createElement('div');
-    card.className = 'border rounded-lg p-4 shadow hover:shadow-lg transition';
+    card.className = 'bg-card p-4 hover:shadow-xl transition';
 
     const title = document.createElement('h3');
     title.className = 'text-xl font-semibold mb-2';
