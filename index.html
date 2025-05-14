@@ -17,7 +17,7 @@
   <!-- En-tête avec navigation -->
   <header class="fixed top-0 left-0 w-full bg-white shadow">
     <nav class="container mx-auto flex items-center justify-between p-4">
-      <div class="text-lg font-bold">SG Portfolio</div>
+      <div class="text-lg font-bold"><img src="./LOGO SEB.png" alt=""></div>
       <!-- Menu burger pour mobile -->
       <input type="checkbox" id="nav-toggle" class="peer hidden" />
       <label for="nav-toggle" class="block md:hidden cursor-pointer">
@@ -108,7 +108,7 @@
     <section id="contact" class="container mx-auto py-16 bg-white">
       <h2 class="text-3xl font-bold mb-6">Contactez-moi</h2>
       <!-- Formulaire de contact (mailto: envoie vers client mail par défaut):contentReference[oaicite:5]{index=5} -->
-      <form id="contact-form" action="mailto:sebcecg@gmail.com" method="POST" enctype="text/plain" class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+      <form id="contact-form"  name="contact" class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6" netlify>
         <input type="text" name="prenom" placeholder="Prénom" required class="border p-2 rounded"/>
         <input type="text" name="nom" placeholder="Nom" required class="border p-2 rounded"/>
         <input type="email" name="email" placeholder="E-mail" required class="border p-2 rounded md:col-span-2"/>
