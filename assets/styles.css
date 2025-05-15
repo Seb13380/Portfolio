@@ -130,6 +130,11 @@ nav {
     transform: rotate(-45deg) translate(6px, -6px);
 }
 
+/* Ajuster la première section pour qu'elle commence après le header */
+#accueil {
+    padding-top: calc(100px + 2rem); /* Hauteur du logo (100px) + padding supplémentaire */
+}
+
 /* Modifier la classe .section pour un meilleur contrôle du background */
 .section {
     min-height: 70vh;
