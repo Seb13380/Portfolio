@@ -5,191 +5,106 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio de Sébastien Giordano</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-
-        .bg-card {
-            @apply bg-gray-900/90 border border-gray-800 rounded-xl shadow-lg text-white transition hover:shadow-2xl;
-        }
-
-        .input-style {
-            @apply border border-gray-700 bg-gray-800 text-white p-3 rounded-md focus:ring-2 focus:ring-blue-500 outline-none transition;
-        }
-
-        .section-bg {
-            @apply bg-cover bg-center bg-no-repeat;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer+SC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/styles.css">
 </head>
 
-<body class="bg-gray-950 text-gray-100 font-sans">
-
-    <!-- En-tête avec navigation -->
-    <header class="fixed top-0 left-0 w-full bg-gray-950/95 shadow-lg border-b border-gray-800 z-50">
-        <nav class="container mx-auto flex justify-between items-center px-6 py-4">
-            <div class="flex items-center gap-3">
-                <img src="./LOGO SEB.png" alt=""
-                    class="w-[60px] h-[60px] object-contain rounded-full border border-gray-700 shadow" />
-                <span class="font-bold text-xl tracking-wide">Sébastien GIORDANO</span>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="./LOGO SEB.png" alt="Logo Sébastien Giordano" class="logo">
+                
             </div>
-            <ul class="hidden md:flex gap-8 font-medium">
-                <li><a href="#accueil" class="hover:text-blue-500 transition-colors">Portfolio</a></li>
-                <li><a href="#apropos" class="hover:text-blue-500 transition-colors">About me</a></li>
-                <li><a href="#competences" class="hover:text-blue-500 transition-colors">Mes compétences</a></li>
-                <li><a href="#contact" class="hover:text-blue-500 transition-colors">Contact</a></li>
+            <ul class="nav-links">
+                <li><a href="#accueil">Portfolio</a></li>
+                <li><a href="#apropos">About me</a></li>
+                <li><a href="#mesprojets">Mes Projets</a></li>
+                <li><a href="#competences">Mes compétences</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-            <!-- Menu burger mobile -->
-            <input type="checkbox" id="nav-toggle" class="peer hidden" />
-            <label for="nav-toggle" class="block md:hidden cursor-pointer">
-                <div class="space-y-1">
-                    <span class="block w-7 h-0.5 bg-gray-400"></span>
-                    <span class="block w-7 h-0.5 bg-gray-400"></span>
-                    <span class="block w-7 h-0.5 bg-gray-400"></span>
-                </div>
-            </label>
-            <ul
-                class="absolute top-20 left-0 w-full bg-gray-950/95 flex-col gap-6 py-6 px-8 hidden peer-checked:flex md:hidden">
-                <li><a href="#accueil" class="hover:text-blue-500 transition-colors">Portfolio</a></li>
-                <li><a href="#apropos" class="hover:text-blue-500 transition-colors">About me</a></li>
-                <li><a href="#competences" class="hover:text-blue-500 transition-colors">Mes compétences</a></li>
-                <li><a href="#contact" class="hover:text-blue-500 transition-colors">Contact</a></li>
-            </ul>
+            <div class="burger-menu">
+                <input type="checkbox" id="nav-toggle" class="burger-input">
+                <label for="nav-toggle" class="burger-label">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
         </nav>
     </header>
 
-    <main class="pt-32">
-
-        <!-- Accueil Section -->
-        <section id="accueil" class="section-bg bg-no-repeat bg-cover bg-center w-full min-h-[70vh] flex items-center justify-center"
-            style="background-image: url('./BG1.jpg');">
-            <div class="bg-gray-950/90 rounded-2xl p-10 shadow-xl flex flex-col items-center gap-4 max-w-2xl w-full">
-                <h1 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight">Sébastien GIORDANO</h1>
-                <p class="text-xl md:text-2xl text-blue-400 font-medium">Développeur Web et Mobile</p>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full mt-6">
-                    <div class="space-y-3">
-                        <div class="px-4 py-2 bg-gray-800/80 rounded-lg text-center">Bac scientifique</div>
-                        <div class="px-4 py-2 bg-gray-800/80 rounded-lg text-center">BTS Optique</div>
-                        <div class="px-4 py-2 bg-gray-800/80 rounded-lg text-center">Bac +2</div>
-                    </div>
-                    <div class="space-y-3">
-                        <div class="px-4 py-2 bg-gray-800/80 rounded-lg text-center">Licence Optique</div>
-                        <div class="px-4 py-2 bg-gray-800/80 rounded-lg text-center">Directeur de centre optique</div>
-                        <div class="px-4 py-2 bg-gray-800/80 rounded-lg text-center">Développeur Web & Mobile</div>
-                    </div>
+    <main>
+        <section id="accueil" class="section">
+            <div class="section-content">
+                <h1>Sébastien GIORDANO</h1>
+                <p class="subtitle">Développeur Web et Mobile</p>
+                
+                <div class="timeline">
+                    <div class="timeline-item">Bac scientifique</div>
+                    <div class="timeline-item">BTS Optique</div>
+                    <div class="timeline-item">Licence Optique</div>
+                    <div class="timeline-item">Directeur de centre optique</div>
+                    <div class="timeline-item">Bac +2</div>
+                    <div class="timeline-item">Développeur Web & Mobile</div>
                 </div>
-                <a href="./cv.pdf" download
-                    class="mt-8 inline-block bg-blue-600 text-white px-8 py-3 rounded-lg shadow hover:bg-blue-700 transition font-semibold">
-                    Télécharger CV
-                </a>
+
+                <a href="./cv.pdf" download class="btn">Télécharger CV</a>
             </div>
         </section>
 
-        <!-- À propos Section -->
-        <section id="apropos" class="section-bg bg-no-repeat bg-cover bg-center w-full min-h-[70vh] flex items-center justify-center"
-            style="background-image: url('./BG2.jpg');">
-            <div class="bg-gray-950/90 rounded-2xl p-10 max-w-3xl mx-auto shadow-xl">
-                <h2 class="text-3xl font-bold mb-6 text-white">Qui suis-je ?</h2>
-                <p class="mb-4 text-gray-200 leading-relaxed">Actuellement en formation en développement web et mobile à
-                    l’École RI7, je me spécialise dans la création de sites et d’applications sécurisées, aussi bien
-                    côté navigateur que serveur.</p>
-                <p class="mb-4 text-gray-200 leading-relaxed">J’ai décidé d’orienter ma trajectoire professionnelle vers
-                    ma passion pour le développement informatique.</p>
-                <p class="mb-4 text-gray-200 leading-relaxed">Cette transition me permet d’allier rigueur, logique et
-                    créativité afin de développer des applications et des sites web ergonomiques et efficaces.</p>
-                <div class="my-8 p-6 bg-gray-900/80 rounded-xl shadow">
-                    <h3 class="text-2xl font-semibold mb-2 text-blue-400">Objectif professionnel</h3>
-                    <p class="text-gray-200">Intégrer une entreprise dynamique où je pourrai mettre mes compétences en
-                        développement web et mobile au service de projets innovants.</p>
-                </div>
-                <div class="flex items-center gap-2 text-blue-300 mt-4">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <path d="M12 2C8.13 2 5 5.13 5 9c0 7 7 13 7 13s7-6 7-13c0-3.87-3.13-7-7-7z" />
-                        <circle cx="12" cy="9" r="2.5" fill="currentColor" />
-                    </svg>
-                    <span>Basé à Plan-de-Cuques (13), disponible pour des opportunités.</span>
+        <section id="apropos" class="section">
+            <div class="section-content">
+                <h2>Qui suis-je ?</h2>
+                <p>Actuellement en formation en développement web et mobile à l'École RI7, je me spécialise dans la création de sites et d'applications sécurisées, aussi bien côté navigateur que serveur.</p>
+                <p>J'ai décidé d'orienter ma trajectoire professionnelle vers ma passion pour le développement informatique.</p>
+                <p>Cette transition me permet d'allier rigueur, logique et créativité afin de développer des applications et des sites web ergonomiques et efficaces.</p>
+                
+                <h3>Objectif professionnel</h3>
+                <p>Intégrer une entreprise dynamique où je pourrai mettre mes compétences en développement web et mobile au service de projets innovants.</p>
+                <p>Basé à Plan-de-Cuques (13), je suis disponible pour des opportunités en entreprise.</p>
+            </div>
+        </section>
+
+        <section id="competences" class="section">
+            <div class="section-content">
+                <h2>Mes compétences et outils utilisés</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">HTML5</div>
+                    <div class="skill-item">CSS3</div>
+                    <div class="skill-item">JavaScript</div>
+                    <div class="skill-item">Tailwind CSS</div>
+                    <div class="skill-item">Git</div>
+                    <div class="skill-item">Node.js</div>
                 </div>
             </div>
         </section>
 
-        <!-- Réalisations Section -->
-        <section id="realisations" class="section-bg bg-no-repeat bg-cover bg-center w-full min-h-[70vh] flex items-center justify-center"
-            style="background-image: url('./BG3.jpg');">
-            <div class="bg-gray-950/90 rounded-2xl p-10 max-w-6xl mx-auto shadow-xl">
-                <h2 class="text-3xl font-bold mb-8 text-white">Mes réalisations</h2>
-                <div id="projects" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Les cartes projets sont générées dynamiquement avec la classe bg-card -->
-                </div>
-            </div>
-        </section>
-
-        <!-- Compétences Section -->
-        <section id="competences" class="section-bg bg-no-repeat bg-cover bg-center w-full min-h-[70vh] flex items-center justify-center"
-            style="background-image: url('./BG4.jpg');">
-            <div class="bg-gray-950/90 rounded-2xl p-10 max-w-4xl mx-auto shadow-xl">
-                <h2 class="text-3xl font-bold mb-8 text-white">Mes compétences et outils utilisés</h2>
-                <div class="flex flex-wrap gap-4 justify-center">
-                    <span class="bg-gray-800/90 px-6 py-3 rounded-lg font-medium text-lg text-white shadow">HTML5</span>
-                    <span class="bg-gray-800/90 px-6 py-3 rounded-lg font-medium text-lg text-white shadow">CSS3</span>
-                    <span
-                        class="bg-gray-800/90 px-6 py-3 rounded-lg font-medium text-lg text-white shadow">JavaScript</span>
-                    <span class="bg-gray-800/90 px-6 py-3 rounded-lg font-medium text-lg text-white shadow">Tailwind
-                        CSS</span>
-                    <span class="bg-gray-800/90 px-6 py-3 rounded-lg font-medium text-lg text-white shadow">Git</span>
-                    <span
-                        class="bg-gray-800/90 px-6 py-3 rounded-lg font-medium text-lg text-white shadow">Node.js</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="section-bg bg-no-repeat bg-cover bg-center w-full min-h-[70vh] flex items-center justify-center"
-            style="background-image: url('./BG5.jpg');">
-            <div class="bg-gray-950/90 rounded-2xl p-10 max-w-2xl w-full mx-4">
-                <h2 class="text-3xl font-bold mb-8 text-white">Contactez-moi</h2>
-                <form id="contact-form" name="contact" class="flex flex-col gap-5 mb-8 w-full" netlify>
-                    <input type="text" name="prenom" placeholder="Prénom" required class="input-style w-full" />
-                    <input type="text" name="nom" placeholder="Nom" required class="input-style w-full" />
-                    <input type="email" name="email" placeholder="E-mail" required class="input-style w-full" />
-                    <textarea name="message" rows="5" placeholder="Message" required class="input-style w-full"></textarea>
-                    <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700 transition font-semibold w-full">
-                        Envoyer
-                    </button>
+        <section id="contact" class="section">
+            <div class="section-content">
+                <h2>Contactez-moi</h2>
+                <form class="contact-form" name="contact" netlify>
+                    <input type="text" name="prenom" placeholder="Prénom" required class="form-input">
+                    <input type="text" name="nom" placeholder="Nom" required class="form-input">
+                    <input type="email" name="email" placeholder="E-mail" required class="form-input">
+                    <textarea name="message" placeholder="Message" required class="form-input"></textarea>
+                    <button type="submit" class="btn">Envoyer</button>
                 </form>
-                <div class="flex gap-6 justify-center">
-                    <a href="tel:+330644269896" class="text-blue-400 hover:text-blue-600 transition-colors text-xl"
-                        title="Téléphone">
-                        <svg class="w-6 h-6 inline" fill="none" stroke="currentColor" stroke-width="2"
-                            viewBox="0 0 24 24">
-                            <path
-                                d="M3 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H5a2 2 0 01-2-2V5zm0 7a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H5a2 2 0 01-2-2v-2zm7-7a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zm0 7a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2zm7-7a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zm0 7a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
-                        </svg>
-                    </a>
-                    <a href="https://wa.me/330123456789" target="_blank"
-                        class="text-green-400 hover:text-green-600 transition-colors text-xl" title="WhatsApp">
-                        <svg class="w-6 h-6 inline" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M20.52 3.48A12.07 12.07 0 0012 0C5.37 0 0 5.37 0 12c0 2.12.55 4.19 1.6 6.01L0 24l6.18-1.62A11.93 11.93 0 0012 24c6.63 0 12-5.37 12-12 0-3.21-1.25-6.23-3.48-8.52zM12 22c-1.85 0-3.66-.5-5.23-1.44l-.37-.22-3.67.96.98-3.58-.24-.37A9.93 9.93 0 012 12c0-5.52 4.48-10 10-10s10 4.48 10 10-4.48 10-10 10zm5.2-7.8c-.28-.14-1.65-.81-1.9-.9-.25-.09-.43-.14-.61.14-.18.28-.7.9-.86 1.08-.16.18-.32.2-.6.07-.28-.14-1.18-.44-2.25-1.41-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.12-.12.28-.32.42-.48.14-.16.18-.28.28-.46.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47-.16-.01-.34-.01-.52-.01-.18 0-.48.07-.73.34-.25.28-.97.95-.97 2.3 0 1.35.99 2.66 1.13 2.85.14.18 1.95 2.98 4.73 4.06.66.28 1.18.45 1.58.58.66.21 1.26.18 1.73.11.53-.08 1.65-.67 1.88-1.32.23-.65.23-1.2.16-1.32-.07-.12-.25-.18-.53-.32z" />
-                        </svg>
-                    </a>
-                    <a href="https://instagram.com/votre.profil" target="_blank"
-                        class="text-pink-400 hover:text-pink-600 transition-colors text-xl" title="Instagram">
-                        <svg class="w-6 h-6 inline" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.308.974.974 1.246 2.241 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.308 3.608-.974.974-2.241 1.246-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.308-.974-.974-1.246-2.241-1.308-3.608C2.175 15.647 2.163 15.267 2.163 12s.012-3.584.07-4.85c.062-1.366.334-2.633 1.308-3.608.974-.974 2.241-1.246 3.608-1.308C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.332.013 7.052.072 5.775.13 4.602.388 3.635 1.355 2.668 2.322 2.41 3.495 2.352 4.772.013 8.332 0 8.741 0 12c0 3.259.013 3.668.072 4.948.058 1.277.316 2.45 1.283 3.417.967.967 2.14 1.225 3.417 1.283C8.332 23.987 8.741 24 12 24c3.259 0 3.668-.013 4.948-.072 1.277-.058 2.45-.316 3.417-1.283.967-.967 1.225-2.14 1.283-3.417.059-1.28.072-1.689.072-4.948 0-3.259-.013-3.668-.072-4.948-.058-1.277-.316-2.45-1.283-3.417-.967-.967-2.14-1.225-3.417-1.283C15.668.013 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a3.999 3.999 0 110-7.998 3.999 3.999 0 010 7.998zm6.406-11.845a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z" />
-                        </svg>
-                    </a>
+
+                <div class="social-links">
+                    <a href="tel:+330644269896" class="social-link">Téléphone</a>
+                    <a href="https://wa.me/330123456789" class="social-link">WhatsApp</a>
+                    <a href="https://instagram.com/votre.profil" class="social-link">Instagram</a>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="text-center py-8 bg-gray-950 border-t border-gray-800">
-        <p class="text-sm text-gray-500">© 2025 Sébastien Giordano</p>
+    <footer>
+        <p>&copy; 2025 Sébastien Giordano</p>
     </footer>
-
 </body>
 
 </html>
