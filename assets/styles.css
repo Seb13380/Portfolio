@@ -158,23 +158,23 @@ nav {
 
 /* Appliquer les backgrounds aux pseudo-éléments de chaque section */
 #accueil::before {
-    background-image: url('../aa.jpg');
+    background-image: url('./images/aa.jpg');
 }
 
 #apropos::before {
-    background-image: url('../bb.jpg');
+    background-image: url('./images/bb.jpg');
 }
 
 #realisations::before {
-    background-image: url('../BG3.jpg');
+    background-image: url('./images/BG1.jpg');
 }
 
 #competences::before {
-    background-image: url('../BG4.jpg');
+    background-image: url('./images/BG4.jpg');
 }
 
 #contact::before {
-    background-image: url('../BG5.jpg');
+    background-image: url('./images/BG5.jpg');
 }
 
 /* Timeline */
