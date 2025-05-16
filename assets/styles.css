@@ -34,6 +34,9 @@ header {
     border-bottom: 1px solid var(--border-color);
     z-index: 50;
 }
+.subtitle {
+    text-align: center;
+}
 
 nav {
     max-width: 1200px;
@@ -42,6 +45,9 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+element.style{
+    text-align: center;
 }
 
 .logo-container {
@@ -68,6 +74,12 @@ nav {
     display: none;
     list-style: none;
     gap: 2rem;
+    
+}
+a{
+    border: #D0A461 2px solid;
+    border-radius: 0%;
+    padding: 8px;
 }
 
 @media (min-width: 768px) {
@@ -135,6 +147,7 @@ nav {
     padding-top: calc(100px + 2rem); /* Hauteur du logo (100px) + padding supplémentaire */
 }
 
+
 /* Modifier la classe .section pour un meilleur contrôle du background */
 .section {
     min-height: 70vh;
@@ -184,9 +197,10 @@ nav {
 
 /* Timeline */
 .timeline {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
     margin: 2rem 0;
 }
 
@@ -321,6 +335,12 @@ footer {
     text-align: center;
     margin-top: 4rem;
 }
+ .section-content {
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
 /* Media Queries */
 @media (max-width: 768px) {
@@ -334,6 +354,9 @@ footer {
 
     .section-content {
         padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .timeline {
@@ -358,7 +381,9 @@ footer {
 }
 
 .btn {
-    display: inline-block;
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
     padding: 0.75rem 2rem;
     background-color: var(--primary-color);
     color: rgb(70, 69, 69);
@@ -366,6 +391,7 @@ footer {
     font-weight: 600;
     text-decoration: none;
     transition: background-color 0.3s;
+    text-align: center;
 }
 
 .btn:hover {
